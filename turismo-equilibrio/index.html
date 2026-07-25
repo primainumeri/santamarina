@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <title>Turismo, territorio e valore — Prima i numeri, poi il cemento</title>
+    <meta name="description" content="Più offerta ricettiva non significa automaticamente più ricchezza. Un turismo in equilibrio protegge chi ha già investito, i residenti e il valore del territorio." />
+    <link rel="canonical" href="https://primainumeri.github.io/onepager/turismo-equilibrio/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:url"         content="https://primainumeri.github.io/onepager/turismo-equilibrio/" />
+    <meta property="og:title"       content="Turismo, territorio e valore — Prima i numeri" />
+    <meta property="og:description" content="Più offerta ricettiva non significa automaticamente più ricchezza. Un turismo in equilibrio protegge chi ha già investito, i residenti e il valore del territorio." />
+    <meta property="og:image"       content="https://primainumeri.github.io/onepager/QUALINUMERI.png" />
+    <meta property="og:locale"      content="it_IT" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content="Turismo, territorio e valore — Prima i numeri" />
+    <meta name="twitter:description" content="Più offerta ricettiva non significa automaticamente più ricchezza. Un turismo in equilibrio protegge chi ha già investito, i residenti e il valore del territorio." />
+    <meta name="twitter:image"       content="https://primainumeri.github.io/onepager/QUALINUMERI.png" />
+
+    <link rel="stylesheet" href="../styles.css" />
+
+    <style>
+      /* Reduced motion */
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+      }
+      /* Focus ring */
+      :focus-visible { outline: 3px solid #3f7eb9; outline-offset: 3px; }
+      /* Details/summary arrow */
+      details summary::-webkit-details-marker { display: none; }
+      details summary::marker { display: none; }
+    </style>
+  </head>
+
+  <body class="bg-brand-sand text-slate-800">
+
+    <!-- ════════════════════════════════════════════════
+         NAVIGAZIONE (sticky)
+    ═════════════════════════════════════════════════ -->
+    <header id="top" class="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between py-3">
+          <a href="../" class="text-sm font-extrabold uppercase tracking-wide text-brand-navy" aria-label="Torna alla guida civica — Prima i numeri">
+            Prima i numeri
+          </a>
+
+          <!-- Hamburger (mobile) -->
+          <button
+            id="nav-toggle"
+            type="button"
+            aria-controls="mobile-nav"
+            aria-expanded="false"
+            aria-label="Apri menu di navigazione"
+            class="inline-flex items-center justify-center rounded-lg p-2 text-slate-700 hover:bg-slate-100 md:hidden"
+          >
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path id="nav-icon-open"  stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              <path id="nav-icon-close" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" class="hidden" />
+            </svg>
+          </button>
+
+          <!-- Desktop nav -->
+          <nav aria-label="Navigazione principale" class="hidden md:flex md:flex-wrap md:items-center md:gap-x-5 md:gap-y-1">
+            <a href="../#breve"        class="text-sm font-semibold text-slate-700 transition hover:text-brand-blue">In breve</a>
+            <a href="../#perche"       class="text-sm font-semibold text-slate-700 transition hover:text-brand-blue">Perché nasce</a>
+            <a href="../#osservazioni" class="text-sm font-semibold text-slate-700 transition hover:text-brand-blue">Osservazioni</a>
+            <a href="../#documenti"    class="text-sm font-semibold text-slate-700 transition hover:text-brand-blue">Documenti</a>
+            <a href="../#stato"        class="text-sm font-semibold text-slate-700 transition hover:text-brand-blue">Stato</a>
+            <a href="../#richieste"    class="text-sm font-semibold text-slate-700 transition hover:text-brand-blue">Richieste</a>
+            <a href="../#faq"          class="text-sm font-semibold text-slate-700 transition hover:text-brand-blue">FAQ</a>
+            <a href="../#fonti"        class="text-sm font-semibold text-slate-700 transition hover:text-brand-blue">Fonti</a>
+          </nav>
+        </div>
+
+        <!-- Mobile nav (collapsible) -->
+        <div id="mobile-nav" class="hidden border-t border-slate-100 pb-3 md:hidden" aria-label="Navigazione principale mobile">
+          <nav class="flex flex-col gap-0.5 pt-2">
+            <a href="../#breve"        class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-brand-blue">In breve</a>
+            <a href="../#perche"       class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-brand-blue">Perché nasce</a>
+            <a href="../#osservazioni" class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-brand-blue">Osservazioni</a>
+            <a href="../#documenti"    class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-brand-blue">Documenti</a>
+            <a href="../#stato"        class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-brand-blue">Stato</a>
+            <a href="../#richieste"    class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-brand-blue">Richieste</a>
+            <a href="../#faq"          class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-brand-blue">FAQ</a>
+            <a href="../#fonti"        class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-brand-blue">Fonti</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- ════════════════════════════════════════════════
+           BREADCRUMB + PULSANTE DI RITORNO
+      ═════════════════════════════════════════════════ -->
+      <div class="mx-auto max-w-6xl px-4 pt-6 pb-0 sm:px-6 lg:px-8">
+        <nav aria-label="Breadcrumb" class="flex flex-wrap items-center gap-1 text-sm text-slate-500">
+          <a href="../" class="hover:text-brand-blue hover:underline">Prima i numeri</a>
+          <span aria-hidden="true">/</span>
+          <span class="font-semibold text-slate-700">Turismo e territorio</span>
+        </nav>
+        <div class="mt-4">
+          <a
+            href="../"
+            class="inline-flex items-center gap-2 rounded-xl border-2 border-brand-navy px-4 py-2 text-sm font-bold text-brand-navy transition hover:bg-brand-navy hover:text-white"
+          >
+            ← Torna alla guida civica
+          </a>
+        </div>
+      </div>
+
+      <!-- ════════════════════════════════════════════════
+           HERO
+      ═════════════════════════════════════════════════ -->
+      <section class="mx-auto max-w-6xl px-4 pt-8 pb-10 sm:px-6 lg:px-8" aria-labelledby="page-h1">
+        <div class="max-w-3xl">
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand-blue" aria-hidden="true">
+            TURISMO, TERRITORIO E VALORE
+          </p>
+          <h1 id="page-h1" class="mt-2 text-3xl font-black uppercase leading-tight text-brand-navy sm:text-4xl lg:text-5xl">
+            Il turismo è un equilibrio,<br />non una corsa ai posti letto
+          </h1>
+          <p class="mt-4 text-xl font-semibold leading-relaxed text-slate-700">
+            Più offerta non significa automaticamente più ricchezza. Sviluppare significa proteggere
+            il valore del territorio e di chi vi ha già investito.
+          </p>
+          <div class="mt-5 space-y-4 text-base leading-8 text-slate-600">
+            <p>
+              Santa Marina vive anche del proprio paesaggio, delle abitazioni date in affitto, dei B&amp;B,
+              degli affittacamere, delle strutture ricettive e delle attività che lavorano durante la stagione turistica.
+            </p>
+            <p>
+              Questo sistema forma un equilibrio delicato. Ogni nuova camera entra in un mercato che esiste già.
+              Se l&rsquo;offerta cresce più rapidamente della domanda, dei servizi e della qualità della destinazione,
+              il risultato non è necessariamente più ricchezza. Può diminuire l&rsquo;occupazione media delle strutture,
+              aumentare la concorrenza sul prezzo e ridurre i margini di chi ha già investito.
+            </p>
+          </div>
+          <p class="mt-6 rounded-2xl border-l-4 border-brand-blue bg-brand-paleBlue/60 px-5 py-4 text-base font-semibold leading-7 text-slate-800">
+            Non chiediamo meno turismo. Chiediamo un turismo capace di lasciare più reddito, più lavoro
+            stabile e più valore sul territorio.
+          </p>
+        </div>
+      </section>
+
+      <!-- ════════════════════════════════════════════════
+           SEZIONE 1 — IL MECCANISMO
+      ═════════════════════════════════════════════════ -->
+      <section class="scroll-mt-20 bg-white py-14" aria-labelledby="s1-h2">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand-blue">Sezione 1</p>
+          <h2 id="s1-h2" class="mt-2 text-2xl font-black uppercase text-brand-navy sm:text-3xl">
+            Quando l&rsquo;offerta cresce senza conoscere la domanda
+          </h2>
+
+          <!-- Sequenza verticale -->
+          <ol class="mt-8 space-y-3" aria-label="Sequenza del rischio di crescita non pianificata">
+            <li class="flex items-start gap-4">
+              <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-brand-blue text-white text-xs font-bold" aria-hidden="true">1</span>
+              <div class="flex-1 rounded-2xl bg-brand-sand p-5">
+                <p class="font-semibold text-slate-800">Nuovi posti letto senza una fotografia completa del mercato</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-brand-blue text-white text-xs font-bold" aria-hidden="true">2</span>
+              <div class="flex-1 rounded-2xl bg-brand-sand p-5">
+                <p class="font-semibold text-slate-800">Offerta che può crescere più della domanda reale</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-brand-blue text-white text-xs font-bold" aria-hidden="true">3</span>
+              <div class="flex-1 rounded-2xl bg-brand-sand p-5">
+                <p class="font-semibold text-slate-800">Meno prenotazioni medie per ciascuna struttura</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-brand-blue text-white text-xs font-bold" aria-hidden="true">4</span>
+              <div class="flex-1 rounded-2xl bg-brand-sand p-5">
+                <p class="font-semibold text-slate-800">Concorrenza concentrata soprattutto sul prezzo</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-brand-blue text-white text-xs font-bold" aria-hidden="true">5</span>
+              <div class="flex-1 rounded-2xl bg-brand-sand p-5">
+                <p class="font-semibold text-slate-800">Margini più bassi e minore capacità di investire nella qualità</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-brand-navy text-white text-xs font-bold" aria-hidden="true">6</span>
+              <div class="flex-1 rounded-2xl border border-brand-blue/20 bg-brand-paleBlue p-5">
+                <p class="font-semibold text-slate-800">Indebolimento dell&rsquo;immagine e del valore della destinazione</p>
+              </div>
+            </li>
+          </ol>
+
+          <p class="mt-6 rounded-2xl border-l-4 border-brand-blue bg-brand-paleBlue/60 px-5 py-4 text-base leading-7 text-slate-800">
+            Non è un risultato inevitabile. È un rischio che la pianificazione deve misurare e prevenire
+            prima di rendere operative nuove trasformazioni.
+          </p>
+        </div>
+      </section>
+
+      <!-- ════════════════════════════════════════════════
+           SEZIONE 2 — PERCHÉ RIGUARDA TUTTI
+      ═════════════════════════════════════════════════ -->
+      <section class="scroll-mt-20 mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8" aria-labelledby="s2-h2">
+        <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand-blue">Sezione 2</p>
+        <h2 id="s2-h2" class="mt-2 text-2xl font-black uppercase text-brand-navy sm:text-3xl">
+          Proteggere il territorio significa proteggere investimenti reali
+        </h2>
+
+        <div class="mt-8 grid gap-6 sm:grid-cols-2">
+
+          <!-- Proprietari e famiglie -->
+          <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+            <h3 class="text-base font-extrabold uppercase text-brand-navy">Proprietari e famiglie</h3>
+            <p class="mt-3 leading-7 text-slate-700">
+              Molte famiglie hanno investito i propri risparmi in una casa, in un immobile da affittare o
+              in una piccola attività ricettiva. Una crescita non coordinata dell&rsquo;offerta può aumentare
+              la concorrenza senza aumentare in modo proporzionale la domanda.
+            </p>
+          </article>
+
+          <!-- Operatori turistici -->
+          <article class="rounded-3xl border border-slate-200 bg-brand-paleBlue p-6 shadow-soft">
+            <h3 class="text-base font-extrabold uppercase text-brand-navy">Operatori turistici</h3>
+            <p class="mt-3 leading-7 text-slate-700">
+              Alberghi, campeggi, B&amp;B, affittacamere e case vacanza hanno bisogno di una destinazione
+              riconoscibile, servizi efficienti e una stagione meno fragile, non soltanto di un numero
+              maggiore di posti letto.
+            </p>
+          </article>
+
+          <!-- Commercio e lavoro locale -->
+          <article class="rounded-3xl border border-slate-200 bg-brand-sage p-6 shadow-soft">
+            <h3 class="text-base font-extrabold uppercase text-brand-navy">Commercio e lavoro locale</h3>
+            <p class="mt-3 leading-7 text-slate-700">
+              Il valore del turismo non si misura soltanto negli arrivi. Conta quanto il visitatore resta,
+              quanto spende nelle attività locali e quanta parte della ricchezza prodotta rimane
+              effettivamente nel territorio.
+            </p>
+          </article>
+
+          <!-- Residenti e nuove generazioni -->
+          <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+            <h3 class="text-base font-extrabold uppercase text-brand-navy">Residenti e nuove generazioni</h3>
+            <p class="mt-3 leading-7 text-slate-700">
+              Acqua, depurazione, viabilità, parcheggi, spiagge, rifiuti e spazi pubblici hanno una
+              capacità limitata. Se questa capacità viene superata, i costi vengono sostenuti dalla
+              comunità anche dopo la fine della stagione.
+            </p>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ════════════════════════════════════════════════
+           SEZIONE 3 — NON È UNA BATTAGLIA CONTRO LO SVILUPPO
+      ═════════════════════════════════════════════════ -->
+      <section class="scroll-mt-20 bg-white py-14" aria-labelledby="s3-h2">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand-blue">Sezione 3</p>
+          <h2 id="s3-h2" class="mt-2 text-2xl font-black uppercase text-brand-navy sm:text-3xl">
+            Più valore, non semplicemente più volume
+          </h2>
+          <p class="mt-4 max-w-3xl text-lg leading-8 text-slate-700">
+            La domanda non è se essere favorevoli o contrari al turismo. La domanda è quale sviluppo
+            possa produrre più valore nel tempo.
+          </p>
+
+          <div class="mt-8 grid gap-6 sm:grid-cols-2">
+
+            <!-- Crescita quantitativa -->
+            <div class="rounded-3xl border border-slate-200 bg-brand-sand p-6 shadow-soft">
+              <h3 class="text-base font-extrabold uppercase text-slate-600">Crescita prevalentemente quantitativa</h3>
+              <ul class="mt-4 space-y-2 text-slate-700" role="list">
+                <li class="flex gap-2">
+                  <span class="mt-1 flex-shrink-0 font-bold text-slate-400" aria-hidden="true">•</span>
+                  più superfici;
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-1 flex-shrink-0 font-bold text-slate-400" aria-hidden="true">•</span>
+                  più edifici;
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-1 flex-shrink-0 font-bold text-slate-400" aria-hidden="true">•</span>
+                  più posti letto;
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-1 flex-shrink-0 font-bold text-slate-400" aria-hidden="true">•</span>
+                  maggiore pressione nei periodi di punta;
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-1 flex-shrink-0 font-bold text-slate-400" aria-hidden="true">•</span>
+                  concorrenza basata soprattutto sul prezzo.
+                </li>
+              </ul>
+            </div>
+
+            <!-- Sviluppo sul valore -->
+            <div class="rounded-3xl border border-brand-blue/20 bg-brand-paleBlue p-6 shadow-soft">
+              <h3 class="text-base font-extrabold uppercase text-brand-navy">Sviluppo fondato sul valore</h3>
+              <ul class="mt-4 space-y-2 text-slate-700" role="list">
+                <li class="flex gap-2">
+                  <span class="mt-1 flex-shrink-0" aria-hidden="true">✓</span>
+                  recupero e riqualificazione dell&rsquo;esistente;
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-1 flex-shrink-0" aria-hidden="true">✓</span>
+                  miglioramento dei servizi;
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-1 flex-shrink-0" aria-hidden="true">✓</span>
+                  qualità dell&rsquo;ospitalità;
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-1 flex-shrink-0" aria-hidden="true">✓</span>
+                  maggiore durata della stagione;
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-1 flex-shrink-0" aria-hidden="true">✓</span>
+                  esperienze legate al paesaggio, al Bussento, ai borghi e alle attività locali;
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-1 flex-shrink-0" aria-hidden="true">✓</span>
+                  maggiore spesa distribuita sul territorio;
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-1 flex-shrink-0" aria-hidden="true">✓</span>
+                  tutela del valore immobiliare e turistico.
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+          <p class="mt-6 rounded-2xl border-l-4 border-brand-green bg-brand-sage/60 px-5 py-4 text-base font-semibold leading-7 text-slate-800">
+            Recuperare, riqualificare ed efficientare gli immobili esistenti produce lavoro per imprese,
+            tecnici e artigiani senza richiedere automaticamente nuovo consumo di suolo.
+          </p>
+        </div>
+      </section>
+
+      <!-- ════════════════════════════════════════════════
+           SEZIONE 4 — IL RISCHIO DELLA CONCORRENZA AL RIBASSO
+      ═════════════════════════════════════════════════ -->
+      <section class="scroll-mt-20 mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8" aria-labelledby="s4-h2">
+        <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand-blue">Sezione 4</p>
+        <h2 id="s4-h2" class="mt-2 text-2xl font-black uppercase text-brand-navy sm:text-3xl">
+          Quando una destinazione è costretta a vendersi soltanto sul prezzo
+        </h2>
+        <div class="mt-6 max-w-3xl space-y-5 text-lg leading-8 text-slate-700">
+          <p>
+            Se molti operatori offrono prodotti simili nello stesso breve periodo, senza servizi, identità
+            e attività capaci di distinguere la destinazione, il prezzo può diventare l&rsquo;unico strumento
+            di competizione.
+          </p>
+          <p>
+            Il problema non sono i turisti con una determinata capacità di spesa. Il problema è un modello
+            nel quale l&rsquo;offerta è costretta a ridurre continuamente i prezzi perché la domanda non
+            cresce quanto i posti disponibili.
+          </p>
+        </div>
+        <p class="mt-6 rounded-2xl border-l-4 border-brand-blue bg-brand-paleBlue/60 px-5 py-4 text-base font-semibold leading-7 text-slate-800">
+          Una destinazione non diventa più ricca soltanto perché ospita più persone. Diventa più ricca
+          quando ogni presenza genera reddito diffuso, lavoro, servizi e investimenti che restano nel territorio.
+        </p>
+
+        <!-- Note linguistiche (non visibili, documentano il criterio redazionale) -->
+        <!-- Evitare: "turismo povero", "turisti di basso livello", "masse di turisti".
+             Usare invece: "bassa spesa distribuita sul territorio", "concorrenza prevalentemente sul prezzo",
+             "forte concentrazione stagionale", "ridotta capacità di trattenere valore localmente". -->
+      </section>
+
+      <!-- ════════════════════════════════════════════════
+           SEZIONE 5 — L'ALTO TIRRENO COSENTINO
+      ═════════════════════════════════════════════════ -->
+      <section class="scroll-mt-20 bg-white py-14" aria-labelledby="s5-h2">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand-blue">Sezione 5</p>
+          <h2 id="s5-h2" class="mt-2 text-2xl font-black uppercase text-brand-navy sm:text-3xl">
+            Un equilibrio già diventato fragile in altre località costiere
+          </h2>
+          <div class="mt-6 max-w-3xl space-y-5 text-lg leading-8 text-slate-700">
+            <p>
+              In diverse località dell&rsquo;Alto Tirreno cosentino una grande disponibilità di seconde case
+              e posti letto convive con una stagione molto concentrata, un utilizzo discontinuo del patrimonio
+              e una forte competizione sui prezzi.
+            </p>
+            <p>
+              Il riferimento non deve essere utilizzato per sostenere che Santa Marina sia destinata
+              automaticamente allo stesso risultato. Serve invece come domanda di pianificazione: prima di
+              aumentare l&rsquo;offerta, abbiamo verificato come evitare una dinamica analoga?
+            </p>
+          </div>
+
+          <!-- Box metodologico -->
+          <div class="mt-8 rounded-2xl border border-brand-blue/20 bg-brand-paleBlue p-5 lg:p-6">
+            <div class="lg:flex lg:items-start lg:gap-10">
+              <h3 class="shrink-0 font-extrabold uppercase text-brand-navy lg:w-32 lg:pt-0.5">Metodo</h3>
+              <p class="mt-2 leading-7 text-slate-700 lg:mt-0">
+                Il confronto con altri territori deve essere documentato con dati verificabili su posti letto,
+                presenze, permanenza media, utilizzazione delle strutture, valori immobiliari e spesa turistica.
+                Non utilizzare singoli annunci immobiliari o testimonianze personali come prova sufficiente
+                di un rapporto causale.
+              </p>
+            </div>
+          </div>
+
+          <!-- Dati da documentare -->
+          <div class="mt-8">
+            <h3 class="text-lg font-extrabold uppercase text-brand-navy">Dati da documentare</h3>
+            <p class="mt-2 text-sm leading-7 text-slate-500">
+              I dati relativi a questa sezione sono in fase di raccolta. Questa pagina sarà aggiornata
+              quando le fonti saranno verificate e citate correttamente.
+            </p>
+
+            <!-- TODO: Inserire dati verificati e fonti per:
+                 - rapporto posti letto/residenti a Santa Marina e nelle località di confronto;
+                 - occupazione media mensile delle strutture ricettive;
+                 - concentrazione presenze luglio-agosto vs. resto stagione;
+                 - andamento storico valori immobiliari (fonte: OMI/Agenzia delle Entrate);
+                 - canoni medi locazioni turistiche (fonte: Agenzia delle Entrate, piattaforme);
+                 - durata media dei soggiorni (fonte: ISTAT/Regione);
+                 - spesa turistica che resta nelle imprese locali (fonte: Banca d'Italia, indagini locali);
+                 - numero seconde case e immobili non occupati (fonte: ISTAT Censimento);
+                 - pressione stagionale su acqua, depurazione, rifiuti, mobilità (fonte: Comune, gestore).
+                 Fonti suggerite: ISTAT, Regione Campania, Regione Calabria,
+                 Agenzia delle Entrate (canoni e locazioni brevi), OMI, Comuni interessati,
+                 associazioni di categoria. -->
+
+            <div class="mt-4 grid gap-3 sm:grid-cols-2">
+              <div class="rounded-2xl border border-dashed border-slate-300 bg-brand-sand p-4">
+                <p class="text-sm font-semibold text-slate-700">Rapporto fra posti letto e residenti</p>
+                <p class="mt-1 text-xs text-slate-400">Dato da rilevare</p>
+              </div>
+              <div class="rounded-2xl border border-dashed border-slate-300 bg-brand-sand p-4">
+                <p class="text-sm font-semibold text-slate-700">Occupazione media mensile</p>
+                <p class="mt-1 text-xs text-slate-400">Dato da rilevare</p>
+              </div>
+              <div class="rounded-2xl border border-dashed border-slate-300 bg-brand-sand p-4">
+                <p class="text-sm font-semibold text-slate-700">Concentrazione delle presenze in luglio e agosto</p>
+                <p class="mt-1 text-xs text-slate-400">Dato da rilevare</p>
+              </div>
+              <div class="rounded-2xl border border-dashed border-slate-300 bg-brand-sand p-4">
+                <p class="text-sm font-semibold text-slate-700">Andamento storico dei prezzi degli immobili</p>
+                <p class="mt-1 text-xs text-slate-400">Dato da rilevare</p>
+              </div>
+              <div class="rounded-2xl border border-dashed border-slate-300 bg-brand-sand p-4">
+                <p class="text-sm font-semibold text-slate-700">Canoni medi delle locazioni turistiche</p>
+                <p class="mt-1 text-xs text-slate-400">Dato da rilevare</p>
+              </div>
+              <div class="rounded-2xl border border-dashed border-slate-300 bg-brand-sand p-4">
+                <p class="text-sm font-semibold text-slate-700">Durata media dei soggiorni</p>
+                <p class="mt-1 text-xs text-slate-400">Dato da rilevare</p>
+              </div>
+              <div class="rounded-2xl border border-dashed border-slate-300 bg-brand-sand p-4">
+                <p class="text-sm font-semibold text-slate-700">Spesa turistica che resta nelle imprese locali</p>
+                <p class="mt-1 text-xs text-slate-400">Dato da rilevare</p>
+              </div>
+              <div class="rounded-2xl border border-dashed border-slate-300 bg-brand-sand p-4">
+                <p class="text-sm font-semibold text-slate-700">Numero di seconde case e immobili non occupati</p>
+                <p class="mt-1 text-xs text-slate-400">Dato da rilevare</p>
+              </div>
+              <div class="rounded-2xl border border-dashed border-slate-300 bg-brand-sand p-4 sm:col-span-2">
+                <p class="text-sm font-semibold text-slate-700">Pressione stagionale su acqua, depurazione, rifiuti e mobilità</p>
+                <p class="mt-1 text-xs text-slate-400">Dato da rilevare</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ════════════════════════════════════════════════
+           SEZIONE 6 — COSA BISOGNA CONOSCERE PRIMA DI DECIDERE
+      ═════════════════════════════════════════════════ -->
+      <section class="scroll-mt-20 mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8" aria-labelledby="s6-h2">
+        <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand-blue">Sezione 6</p>
+        <h2 id="s6-h2" class="mt-2 text-2xl font-black uppercase text-brand-navy sm:text-3xl">
+          Prima di nuovi posti letto serve una fotografia del sistema esistente
+        </h2>
+
+        <div class="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-soft sm:p-8">
+          <ul class="space-y-3" role="list">
+            <li class="flex gap-3 leading-7 text-slate-700">
+              <span class="mt-1 flex-shrink-0" aria-hidden="true">✓</span>
+              numero effettivo di alberghi, B&amp;B, affittacamere, case vacanza e locazioni brevi;
+            </li>
+            <li class="flex gap-3 leading-7 text-slate-700">
+              <span class="mt-1 flex-shrink-0" aria-hidden="true">✓</span>
+              seconde case effettivamente utilizzate per finalità turistiche;
+            </li>
+            <li class="flex gap-3 leading-7 text-slate-700">
+              <span class="mt-1 flex-shrink-0" aria-hidden="true">✓</span>
+              posti letto autorizzati, disponibili e realmente utilizzati;
+            </li>
+            <li class="flex gap-3 leading-7 text-slate-700">
+              <span class="mt-1 flex-shrink-0" aria-hidden="true">✓</span>
+              occupazione mese per mese;
+            </li>
+            <li class="flex gap-3 leading-7 text-slate-700">
+              <span class="mt-1 flex-shrink-0" aria-hidden="true">✓</span>
+              prezzi medi e durata dei soggiorni;
+            </li>
+            <li class="flex gap-3 leading-7 text-slate-700">
+              <span class="mt-1 flex-shrink-0" aria-hidden="true">✓</span>
+              strutture inattive, sottoutilizzate o recuperabili;
+            </li>
+            <li class="flex gap-3 leading-7 text-slate-700">
+              <span class="mt-1 flex-shrink-0" aria-hidden="true">✓</span>
+              tipologie di offerta realmente mancanti;
+            </li>
+            <li class="flex gap-3 leading-7 text-slate-700">
+              <span class="mt-1 flex-shrink-0" aria-hidden="true">✓</span>
+              capacità di acqua, fognature e depurazione;
+            </li>
+            <li class="flex gap-3 leading-7 text-slate-700">
+              <span class="mt-1 flex-shrink-0" aria-hidden="true">✓</span>
+              traffico, parcheggi, rifiuti e accessibilità delle spiagge;
+            </li>
+            <li class="flex gap-3 leading-7 text-slate-700">
+              <span class="mt-1 flex-shrink-0" aria-hidden="true">✓</span>
+              effetti cumulativi delle diverse previsioni urbanistiche;
+            </li>
+            <li class="flex gap-3 leading-7 text-slate-700">
+              <span class="mt-1 flex-shrink-0" aria-hidden="true">✓</span>
+              ricaduta economica effettiva sulle attività locali.
+            </li>
+          </ul>
+        </div>
+
+        <p class="mt-6 rounded-2xl border-l-4 border-brand-blue bg-brand-paleBlue/60 px-5 py-4 text-base font-semibold leading-7 text-slate-800">
+          Solo dopo questa ricognizione è possibile distinguere uno sviluppo utile da un semplice
+          aumento della capacità edilizia e ricettiva.
+        </p>
+      </section>
+
+      <!-- ════════════════════════════════════════════════
+           SEZIONE 7 — LA PROPOSTA
+      ═════════════════════════════════════════════════ -->
+      <section class="scroll-mt-20 bg-white py-14" aria-labelledby="s7-h2">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand-blue">Sezione 7</p>
+          <h2 id="s7-h2" class="mt-2 text-2xl font-black uppercase text-brand-navy sm:text-3xl">
+            Proteggere il valore, non fermare lo sviluppo
+          </h2>
+
+          <!-- Tre passaggi -->
+          <div class="mt-8 grid gap-4 sm:grid-cols-3">
+            <div class="rounded-3xl bg-brand-navy p-6 text-white">
+              <p class="text-5xl font-black text-white/20" aria-hidden="true">1</p>
+              <p class="mt-2 text-lg font-extrabold uppercase leading-snug">Contare ciò che esiste</p>
+            </div>
+            <div class="rounded-3xl bg-brand-blue p-6 text-white">
+              <p class="text-5xl font-black text-white/20" aria-hidden="true">2</p>
+              <p class="mt-2 text-lg font-extrabold uppercase leading-snug">Misurare ciò che il territorio può sostenere</p>
+            </div>
+            <div class="rounded-3xl bg-brand-green p-6 text-white">
+              <p class="text-5xl font-black text-white/20" aria-hidden="true">3</p>
+              <p class="mt-2 text-lg font-extrabold uppercase leading-snug">Autorizzare soltanto ciò che produce valore dimostrabile</p>
+            </div>
+          </div>
+
+          <div class="mt-8 max-w-3xl space-y-5 text-lg leading-8 text-slate-700">
+            <p>
+              Un piano urbanistico non deve scegliere soltanto dove si potrà costruire. Deve anche
+              proteggere l&rsquo;equilibrio economico, ambientale e sociale sul quale si fonda il futuro
+              della comunità.
+            </p>
+            <p>
+              Prima il censimento. Poi il limite sostenibile. Poi, soltanto se necessario, nuove strutture.
+            </p>
+          </div>
+
+          <!-- Pulsanti finali -->
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a
+              href="../"
+              class="rounded-xl bg-brand-navy px-5 py-3 text-sm font-bold text-white shadow transition hover:bg-brand-blue"
+            >
+              Torna alla guida civica
+            </a>
+            <a
+              href="../#obs3"
+              class="rounded-xl bg-brand-blue px-5 py-3 text-sm font-bold text-white shadow transition hover:bg-brand-navy"
+            >
+              Vai all&rsquo;Osservazione 3 – Turismo
+            </a>
+            <a
+              href="../#fonti"
+              class="rounded-xl border-2 border-brand-navy px-5 py-3 text-sm font-bold text-brand-navy transition hover:bg-brand-navy hover:text-white"
+            >
+              Consulta documenti e fonti
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ════════════════════════════════════════════════
+         FOOTER
+    ═════════════════════════════════════════════════ -->
+    <footer class="border-t border-slate-200 bg-brand-navy text-white">
+      <div class="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="lg:col-span-2">
+            <p class="text-lg font-extrabold uppercase tracking-wide">Prima i numeri, poi il cemento</p>
+            <p class="mt-1 text-sm text-slate-300">Iniziativa civica sul PUC di Santa Marina</p>
+            <p class="mt-3 text-sm leading-7 text-slate-300">
+              Perché i numeri si possono correggere. Il suolo consumato no.
+            </p>
+            <p class="mt-3 text-xs leading-6 text-slate-400">
+              Sintesi divulgativa: per il contenuto completo fanno fede gli atti protocollati
+              e gli elaborati ufficiali.
+            </p>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.22em] text-slate-400">Navigazione</p>
+            <nav aria-label="Navigazione footer" class="mt-3 flex flex-col gap-2">
+              <a href="../#breve"        class="text-sm text-slate-300 hover:text-white">In breve</a>
+              <a href="../#perche"       class="text-sm text-slate-300 hover:text-white">Perché nasce</a>
+              <a href="../#osservazioni" class="text-sm text-slate-300 hover:text-white">Osservazioni</a>
+              <a href="../#documenti"    class="text-sm text-slate-300 hover:text-white">Documenti</a>
+              <a href="../#stato"        class="text-sm text-slate-300 hover:text-white">Stato</a>
+              <a href="../#richieste"    class="text-sm text-slate-300 hover:text-white">Richieste</a>
+              <a href="../#faq"          class="text-sm text-slate-300 hover:text-white">FAQ</a>
+              <a href="../#fonti"        class="text-sm text-slate-300 hover:text-white">Fonti</a>
+            </nav>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.22em] text-slate-400">Riferimenti</p>
+            <p class="mt-3 text-xs leading-6 text-slate-400">
+              PUC Santa Marina · PTCP Provincia di Salerno · Direttiva 2001/42/CE · D.Lgs. 152/2006
+            </p>
+            <p class="mt-4 text-xs font-bold uppercase tracking-[0.22em] text-slate-400">Approfondimenti</p>
+            <nav aria-label="Approfondimenti footer" class="mt-2 flex flex-col gap-1">
+              <a href="./" class="text-sm text-slate-300 hover:text-white">Turismo, territorio e valore</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Cloudflare Web Analytics -->
+    <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "622e83105b2041d98c7bf5cdf0a69013"}'></script>
+    <!-- End Cloudflare Web Analytics -->
+
+    <!-- ════════════════════════════════════════════════
+         SCRIPT — mobile nav toggle
+    ═════════════════════════════════════════════════ -->
+    <script>
+      "use strict";
+      (function () {
+        var btn    = document.getElementById("nav-toggle");
+        var menu   = document.getElementById("mobile-nav");
+        var iOpen  = document.getElementById("nav-icon-open");
+        var iClose = document.getElementById("nav-icon-close");
+        if (!btn || !menu) return;
+        btn.addEventListener("click", function () {
+          var open = menu.classList.toggle("hidden");
+          btn.setAttribute("aria-expanded", String(!open));
+          if (iOpen)  iOpen.classList.toggle("hidden", !open);
+          if (iClose) iClose.classList.toggle("hidden", open);
+        });
+        menu.querySelectorAll("a").forEach(function (a) {
+          a.addEventListener("click", function () {
+            menu.classList.add("hidden");
+            btn.setAttribute("aria-expanded", "false");
+            if (iOpen)  iOpen.classList.remove("hidden");
+            if (iClose) iClose.classList.add("hidden");
+          });
+        });
+      })();
+    </script>
+
+  </body>
+</html>
