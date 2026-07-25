@@ -110,9 +110,9 @@ var SUBSEQUENT_ACTS = [];
 //   date: "luglio 2025", protocollo: "PROT/2025/XXXX", link: "" },
 // ────────────────────────────────────────────────────────────────────────────
 var TIMELINE = [
-  { id: "lettura",          label: "Lettura degli elaborati",             status: "pending", description: "", date: "", protocollo: "", link: "" },
-  { id: "preparazione",    label: "Preparazione delle osservazioni",     status: "pending", description: "", date: "", protocollo: "", link: "" },
-  { id: "deposito",        label: "Deposito al protocollo",              status: "pending", description: "", date: "", protocollo: "", link: "" },
+  { id: "lettura",          label: "Lettura degli elaborati",             status: "completed", description: "", date: "", protocollo: "", link: "" },
+  { id: "preparazione",    label: "Preparazione delle osservazioni",     status: "completed", description: "", date: "", protocollo: "", link: "" },
+  { id: "deposito",        label: "Deposito al protocollo",              status: "current", description: "", date: "", protocollo: "", link: "" },
   { id: "nota",            label: "Nota al Commissario",                 status: "pending", description: "", date: "", protocollo: "", link: "" },
   { id: "incontro",        label: "Richiesta di incontro tecnico",       status: "pending", description: "", date: "", protocollo: "", link: "" },
   { id: "esame",           label: "Esame delle osservazioni",            status: "pending", description: "", date: "", protocollo: "", link: "" },
