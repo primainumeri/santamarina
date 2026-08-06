@@ -1041,7 +1041,6 @@
             <form
               id="contributo-form"
               class="mt-6 grid gap-5 sm:grid-cols-2"
-              onsubmit="inviaContributo(event)"
               novalidate
             >
               <div>
@@ -1455,9 +1454,23 @@
         var mailto = 'mailto:primainumeri@proton.me'
           + '?subject=' + encodeURIComponent('[Contributo tecnico] ' + oggetto)
           + '&body=' + encodeURIComponent(corpo);
-        window.location.href = mailto;
+        var link = document.createElement('a');
+        link.href = mailto;
+        link.style.display = 'none';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
         avviso.textContent = "Si sta aprendo il tuo client email. Se non si apre, scrivi direttamente a primainumeri@proton.me.";
         avviso.classList.remove('hidden');
+      }
+      function bindContributoForm() {
+        var form = document.getElementById('contributo-form');
+        if (form) form.addEventListener('submit', inviaContributo);
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', bindContributoForm);
+      } else {
+        bindContributoForm();
       }
     </script>
 
