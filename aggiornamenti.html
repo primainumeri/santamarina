@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aggiornamenti — Prima i numeri, poi il cemento</title>
+    <meta name="description" content="Archivio completo degli aggiornamenti tecnici sul PUC di Santa Marina." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-brand-sand text-slate-800">
+    <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between py-3">
+          <a href="./index.html#hero" class="text-sm font-extrabold uppercase tracking-wide text-brand-navy" aria-label="Torna alla pagina principale">
+            Prima i numeri
+          </a>
+          <nav aria-label="Navigazione principale" class="hidden md:flex md:flex-wrap md:items-center md:gap-x-5 md:gap-y-1">
+            <a href="./index.html#breve" class="text-sm font-semibold text-slate-700 transition hover:text-brand-blue">In breve</a>
+            <a href="./aggiornamenti.html" class="rounded-lg bg-brand-green px-3 py-2 text-sm font-semibold text-white transition hover:opacity-90">Aggiornamenti</a>
+            <a href="./index.html#documenti" class="text-sm font-semibold text-slate-700 transition hover:text-brand-blue">Documenti</a>
+            <a href="./index.html#contribuisci" class="rounded-lg bg-brand-blue px-3 py-2 text-sm font-semibold text-white transition hover:opacity-90">Contribuisci</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8" aria-labelledby="aggiornamenti-h1">
+        <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand-blue">Archivio completo</p>
+        <h1 id="aggiornamenti-h1" class="mt-2 text-3xl font-black uppercase text-brand-navy sm:text-4xl">
+          Tutti gli aggiornamenti
+        </h1>
+        <p class="mt-4 max-w-3xl text-lg leading-8 text-slate-700">
+          In questa pagina trovi tutti gli aggiornamenti disponibili in ordine cronologico.
+        </p>
+        <div id="updates-grid" class="mt-8 grid gap-6"></div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-200 bg-brand-navy text-white">
+      <div class="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+        <p class="text-sm text-slate-300">
+          <a href="./index.html" class="underline underline-offset-2 hover:text-white">Torna alla pagina principale</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script>
+      "use strict";
+
+      function esc(s) {
+        return String(s)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/\"/g, "&quot;");
+      }
+
+      (function () {
+        var grid = document.getElementById("updates-grid");
+        if (!grid) return;
+        var updates = (typeof UPDATES !== "undefined") ? UPDATES.slice() : [];
+        updates.sort(function (a, b) {
+          return String(b.dateISO || "").localeCompare(String(a.dateISO || ""));
+        });
+
+        updates.forEach(function (item) {
+          var card = document.createElement("article");
+          card.className = "rounded-3xl border border-slate-200 bg-white p-8 shadow-soft";
+          var paragraphs = (item.paragraphs || []).map(function (p) {
+            return "<p>" + esc(p) + "</p>";
+          }).join("");
+          card.innerHTML = ""
+            + '<p class="text-xs font-bold uppercase tracking-[0.22em] text-brand-blue">' + esc(item.dateLabel || "") + "</p>"
+            + '<h2 class="mt-2 text-2xl font-black uppercase text-brand-navy">' + esc(item.title || "") + "</h2>"
+            + '<div class="mt-5 space-y-4 leading-8 text-slate-700">' + paragraphs + "</div>";
+          grid.appendChild(card);
+        });
+      })();
+    </script>
+  </body>
+</html>
