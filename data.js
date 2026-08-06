@@ -8,7 +8,7 @@ var SITE = {
   description: "Quattro osservazioni al PUC di Santa Marina spiegate in parole semplici, con documenti completi, fonti e aggiornamenti sul procedimento.",
   canonical:   "https://primainumeri.github.io/onepager/",
   version:     "1.0",
-  lastUpdated: "",   // es. "luglio 2025" — lasciare vuoto per non mostrarlo
+  lastUpdated: "6 agosto 2026",
   ogImage:     "QUALINUMERI.png",
 };
 
@@ -30,6 +30,19 @@ var DOCUMENTS = [
     pagine:      null,
     published:   true,
     highlight:   true,
+  },
+  {
+    id:          "verbale-conferenza-2013",
+    title:       "Verbale della Conferenza provinciale (2013)",
+    description: "Documento richiamato nel primo aggiornamento tecnico sul fabbisogno residenziale complessivo di Santa Marina.",
+    file:        "",
+    version:     "",
+    date:        "2013",
+    status:      "in pubblicazione",
+    protocollo:  "",
+    pagine:      null,
+    published:   false,
+    highlight:   false,
   },
   {
     id:          "obs1",
