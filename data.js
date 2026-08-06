@@ -114,6 +114,40 @@ var DOCUMENTS = [
 var SUBSEQUENT_ACTS = [];
 
 // ────────────────────────────────────────────────────────────────────────────
+// AGGIORNAMENTI
+// Ordinare con la data ISO (YYYY-MM-DD): i più recenti hanno dataISO maggiore.
+// ────────────────────────────────────────────────────────────────────────────
+var UPDATES = [
+  {
+    id: "contributo-tecnico-1-2026-08-05",
+    dateISO: "2026-08-05",
+    dateLabel: "05 agosto 2026",
+    title: "Contributo tecnico 1",
+    paragraphs: [
+      {
+        textBefore: "Un architetto interessato al tema ha condiviso il ",
+        linkLabel: "verbale della Conferenza provinciale del 2013",
+        linkHref: "./index.html#documenti",
+        textAfter: ", che indica espressamente per Santa Marina un fabbisogno residenziale di 90 alloggi, riferito a un orizzonte decennale e soggetto a verifica quinquennale.",
+      },
+      "Secondo il contributo, i 90 alloggi rappresentano il fabbisogno complessivo da attuare nel periodo del PUC, distribuendone eventualmente la realizzazione nel tempo.",
+      "Restano da chiarire l'aggiornamento dei dati demografici, la ripartizione tra 54 alloggi privati e 36 ERP e il rapporto con il patrimonio esistente e recuperabile. I rilievi ricevuti rafforzano inoltre le richieste di chiarimento sul dimensionamento turistico e sulla qualità della VAS.",
+    ],
+  },
+  {
+    id: "contributo-tecnico-2-2026-08-05",
+    dateISO: "2026-08-05",
+    dateLabel: "05 agosto 2026",
+    title: "Contributo tecnico 2",
+    paragraphs: [
+      "Un geologo interessato al tema ha evidenziato che il PUC contiene un quadro generale geologico e idrogeologico, ma non una valutazione quantitativa degli effetti delle nuove trasformazioni sulle acque meteoriche, sui fossi, sulle condotte e sui recapiti esistenti.",
+      "Secondo il contributo, i calcoli di dettaglio possono essere rinviati ai piani attuativi o ai singoli progetti, ma il PUC dovrebbe già chiarire la fattibilità generale degli interventi.",
+      "Ogni nuova edificazione dovrebbe quindi essere subordinata alla verifica delle portate prima e dopo l'impermeabilizzazione, della capacità dei recapiti e alla realizzazione delle opere necessarie. In caso di esito negativo, le previsioni dovrebbero essere ridotte, modificate o non attuate.",
+    ],
+  },
+];
+
+// ────────────────────────────────────────────────────────────────────────────
 // STATO DEL PROCEDIMENTO
 // Per ogni passaggio: impostare status ("completed" | "current" | "pending")
 // e compilare description, date, protocollo, link quando disponibili.
