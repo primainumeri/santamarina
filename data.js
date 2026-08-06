@@ -35,7 +35,7 @@ var DOCUMENTS = [
     id:          "verbale-conferenza-2013",
     title:       "Verbale della Conferenza provinciale (2013)",
     description: "Documento richiamato nel primo aggiornamento tecnico sul fabbisogno residenziale complessivo di Santa Marina.",
-    file:        "./verbale_conferenza_provinciale_2013.pdf",
+    file:        "./20130606_Verbale_provincia_assegnazione_alloggi.pdf",
     version:     "",
     date:        "2013",
     status:      "disponibile",
@@ -191,7 +191,7 @@ var SOURCES = {
     items: [
       { label: "PTCP Provincia di Salerno",                  url: "" },
       { label: "Articoli richiamati nelle osservazioni",     url: "" },
-      { label: "Verbale della Conferenza provinciale (2013)", url: "./verbale_conferenza_provinciale_2013.pdf" },
+      { label: "Verbale della Conferenza provinciale (2013)", url: "./20130606_Verbale_provincia_assegnazione_alloggi.pdf" },
     ],
   },
   vas: {
