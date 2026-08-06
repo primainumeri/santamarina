@@ -1463,10 +1463,15 @@
         avviso.textContent = "Si sta aprendo il tuo client email. Se non si apre, scrivi direttamente a primainumeri@proton.me.";
         avviso.classList.remove('hidden');
       }
-      (function () {
+      function bindContributoForm() {
         var form = document.getElementById('contributo-form');
         if (form) form.addEventListener('submit', inviaContributo);
-      })();
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', bindContributoForm);
+      } else {
+        bindContributoForm();
+      }
     </script>
 
   </body>
