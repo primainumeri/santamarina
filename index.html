@@ -1163,13 +1163,32 @@
         updates.slice(0, 2).forEach(function (item) {
           var card = document.createElement("article");
           card.className = "rounded-3xl border border-slate-200 bg-white p-8 shadow-soft";
-          var paragraphs = (item.paragraphs || []).map(function (p) {
-            return '<p>' + esc(p) + '</p>';
-          }).join("");
-          card.innerHTML = ''
-            + '<p class="text-xs font-bold uppercase tracking-[0.22em] text-brand-blue">' + esc(item.dateLabel || "") + '</p>'
-            + '<h3 class="mt-2 text-2xl font-black uppercase text-brand-navy">' + esc(item.title || "") + '</h3>'
-            + '<div class="mt-5 space-y-4 leading-8 text-slate-700">' + paragraphs + '</div>';
+          var date = document.createElement("p");
+          date.className = "text-xs font-bold uppercase tracking-[0.22em] text-brand-blue";
+          date.textContent = item.dateLabel || "";
+          var title = document.createElement("h3");
+          title.className = "mt-2 text-2xl font-black uppercase text-brand-navy";
+          title.textContent = item.title || "";
+          var body = document.createElement("div");
+          body.className = "mt-5 space-y-4 leading-8 text-slate-700";
+          (item.paragraphs || []).forEach(function (entry) {
+            var p = document.createElement("p");
+            if (entry && typeof entry === "object" && entry.linkHref && entry.linkLabel) {
+              p.appendChild(document.createTextNode(entry.textBefore || ""));
+              var a = document.createElement("a");
+              a.href = entry.linkHref;
+              a.className = "font-semibold text-brand-blue underline underline-offset-2 hover:text-brand-navy";
+              a.textContent = entry.linkLabel;
+              p.appendChild(a);
+              p.appendChild(document.createTextNode(entry.textAfter || ""));
+            } else {
+              p.textContent = String(entry || "");
+            }
+            body.appendChild(p);
+          });
+          card.appendChild(date);
+          card.appendChild(title);
+          card.appendChild(body);
           grid.appendChild(card);
         });
       })();

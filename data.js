@@ -124,7 +124,12 @@ var UPDATES = [
     dateLabel: "05 agosto 2026",
     title: "Contributo tecnico 1",
     paragraphs: [
-      "Un architetto interessato al tema ha condiviso il verbale della Conferenza provinciale del 2013, che indica espressamente per Santa Marina un fabbisogno residenziale di 90 alloggi, riferito a un orizzonte decennale e soggetto a verifica quinquennale.",
+      {
+        textBefore: "Un architetto interessato al tema ha condiviso il ",
+        linkLabel: "verbale della Conferenza provinciale del 2013",
+        linkHref: "./index.html#documenti",
+        textAfter: ", che indica espressamente per Santa Marina un fabbisogno residenziale di 90 alloggi, riferito a un orizzonte decennale e soggetto a verifica quinquennale.",
+      },
       "Secondo il contributo, i 90 alloggi rappresentano il fabbisogno complessivo da attuare nel periodo del PUC, distribuendone eventualmente la realizzazione nel tempo.",
       "Restano da chiarire l'aggiornamento dei dati demografici, la ripartizione tra 54 alloggi privati e 36 ERP e il rapporto con il patrimonio esistente e recuperabile. I rilievi ricevuti rafforzano inoltre le richieste di chiarimento sul dimensionamento turistico e sulla qualità della VAS.",
     ],
