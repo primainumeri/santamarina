@@ -191,6 +191,7 @@ var SOURCES = {
     items: [
       { label: "PTCP Provincia di Salerno",                  url: "" },
       { label: "Articoli richiamati nelle osservazioni",     url: "" },
+      { label: "Verbale della Conferenza provinciale (2013)", url: "" },
     ],
   },
   vas: {
