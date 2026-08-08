@@ -33,6 +33,52 @@
         <p class="mt-4 max-w-3xl text-lg leading-8 text-slate-700">
           In questa pagina trovi tutti gli aggiornamenti disponibili in ordine cronologico.
         </p>
+        <div
+          data-share-block
+          data-share-url="https://santamarina.primainumeri.it/aggiornamenti.html"
+          data-share-title="Aggiornamenti — Prima i numeri, poi il cemento"
+          class="mt-6 max-w-3xl rounded-2xl border border-slate-200 bg-white p-4 shadow-soft"
+        >
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand-blue">Condividi questa pagina</p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <button
+              type="button"
+              data-share-native
+              class="hidden rounded-xl bg-brand-blue px-4 py-2 text-sm font-bold text-white transition hover:opacity-90"
+            >
+              Condividi
+            </button>
+            <a
+              href="#"
+              data-share-whatsapp
+              class="rounded-xl bg-brand-green px-4 py-2 text-sm font-bold text-white transition hover:opacity-90"
+            >
+              WhatsApp
+            </a>
+            <a
+              href="#"
+              data-share-facebook
+              class="rounded-xl bg-brand-navy px-4 py-2 text-sm font-bold text-white transition hover:bg-brand-blue"
+            >
+              Facebook
+            </a>
+            <a
+              href="#"
+              data-share-email
+              class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-bold text-slate-700 transition hover:border-brand-navy hover:text-brand-navy"
+            >
+              Email
+            </a>
+            <button
+              type="button"
+              data-share-copy
+              class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-bold text-slate-700 transition hover:border-brand-navy hover:text-brand-navy"
+            >
+              Copia link
+            </button>
+          </div>
+          <p data-share-feedback class="mt-2 hidden text-sm text-slate-600" aria-live="polite"></p>
+        </div>
         <div id="updates-grid" class="mt-8 grid gap-6 lg:grid-cols-2"></div>
       </section>
     </main>
@@ -87,6 +133,60 @@
           card.appendChild(title);
           card.appendChild(body);
           grid.appendChild(card);
+        });
+      })();
+
+      (function () {
+        function fallbackCopy(text) {
+          var area = document.createElement("textarea");
+          area.value = text;
+          area.setAttribute("readonly", "");
+          area.style.position = "absolute";
+          area.style.left = "-9999px";
+          document.body.appendChild(area);
+          area.select();
+          document.execCommand("copy");
+          document.body.removeChild(area);
+        }
+
+        document.querySelectorAll("[data-share-block]").forEach(function (block) {
+          var url = block.getAttribute("data-share-url") || window.location.href;
+          var title = block.getAttribute("data-share-title") || document.title;
+          var text = title + " " + url;
+          var whatsapp = block.querySelector("[data-share-whatsapp]");
+          var facebook = block.querySelector("[data-share-facebook]");
+          var email = block.querySelector("[data-share-email]");
+          var nativeBtn = block.querySelector("[data-share-native]");
+          var copyBtn = block.querySelector("[data-share-copy]");
+          var feedback = block.querySelector("[data-share-feedback]");
+
+          if (whatsapp) whatsapp.href = "https://wa.me/?text=" + encodeURIComponent(text);
+          if (facebook) facebook.href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url);
+          if (email) {
+            email.href = "mailto:?subject=" + encodeURIComponent(title)
+              + "&body=" + encodeURIComponent(title + "\n\n" + url);
+          }
+
+          if (nativeBtn && navigator.share) {
+            nativeBtn.classList.remove("hidden");
+            nativeBtn.addEventListener("click", function () {
+              navigator.share({ title: title, text: title, url: url }).catch(function () {});
+            });
+          }
+
+          if (copyBtn) {
+            copyBtn.addEventListener("click", function () {
+              var copyAction = navigator.clipboard && navigator.clipboard.writeText
+                ? navigator.clipboard.writeText(url)
+                : Promise.resolve().then(function () { fallbackCopy(url); });
+              copyAction.then(function () {
+                if (feedback) {
+                  feedback.textContent = "Link copiato.";
+                  feedback.classList.remove("hidden");
+                }
+              });
+            });
+          }
         });
       })();
     </script>
