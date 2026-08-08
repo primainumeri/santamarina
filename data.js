@@ -6,7 +6,7 @@
 var SITE = {
   title:       "Prima i numeri, poi il cemento — Guida civica al PUC di Santa Marina",
   description: "Quattro osservazioni al PUC di Santa Marina spiegate in parole semplici, con documenti completi, fonti e aggiornamenti sul procedimento.",
-  canonical:   "https://primainumeri.github.io/onepager/",
+  canonical:   "https://santamarina.primainumeri.it/",
   version:     "1.0",
   lastUpdated: "6 agosto 2026",
   ogImage:     "QUALINUMERI.png",
