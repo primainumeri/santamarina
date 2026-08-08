@@ -9,7 +9,7 @@
     area.style.left = "-9999px";
     document.body.appendChild(area);
     area.select();
-    var copied = document.execCommand("copy");
+    var copied = typeof document.execCommand === "function" && document.execCommand("copy");
     document.body.removeChild(area);
     if (!copied) throw new Error("copy_failed");
   }
@@ -42,7 +42,14 @@
     if (copyBtn) {
       copyBtn.addEventListener("click", function () {
         var copyAction = navigator.clipboard && navigator.clipboard.writeText
-          ? navigator.clipboard.writeText(url).catch(function () { fallbackCopy(url); })
+          ? navigator.clipboard.writeText(url).catch(function () {
+              try {
+                fallbackCopy(url);
+                return true;
+              } catch (error) {
+                return Promise.reject(error);
+              }
+            })
           : Promise.resolve().then(function () { fallbackCopy(url); });
         copyAction.then(function () {
           if (feedback) {
