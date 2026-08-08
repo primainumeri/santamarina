@@ -45,9 +45,8 @@
           ? navigator.clipboard.writeText(url).catch(function () {
               try {
                 fallbackCopy(url);
-                return true;
               } catch (error) {
-                return Promise.reject(error);
+                throw error;
               }
             })
           : Promise.resolve().then(function () { fallbackCopy(url); });
