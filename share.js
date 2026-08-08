@@ -42,13 +42,7 @@
     if (copyBtn) {
       copyBtn.addEventListener("click", function () {
         var copyAction = navigator.clipboard && navigator.clipboard.writeText
-          ? navigator.clipboard.writeText(url).catch(function () {
-              try {
-                fallbackCopy(url);
-              } catch (error) {
-                throw error;
-              }
-            })
+          ? navigator.clipboard.writeText(url).catch(function () { fallbackCopy(url); })
           : Promise.resolve().then(function () { fallbackCopy(url); });
         copyAction.then(function () {
           if (feedback) {
