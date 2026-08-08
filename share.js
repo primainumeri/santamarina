@@ -14,6 +14,21 @@
     if (!copied) throw new Error("copy_failed");
   }
 
+  function copyText(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text).then(function () {
+        return;
+      }, function () {
+        return Promise.resolve().then(function () {
+          fallbackCopy(text);
+        });
+      });
+    }
+    return Promise.resolve().then(function () {
+      fallbackCopy(text);
+    });
+  }
+
   document.querySelectorAll("[data-share-block]").forEach(function (block) {
     var url = block.getAttribute("data-share-url") || window.location.href;
     var title = block.getAttribute("data-share-title") || document.title;
@@ -41,10 +56,7 @@
 
     if (copyBtn) {
       copyBtn.addEventListener("click", function () {
-        var copyAction = navigator.clipboard && navigator.clipboard.writeText
-          ? navigator.clipboard.writeText(url).catch(function () { fallbackCopy(url); })
-          : Promise.resolve().then(function () { fallbackCopy(url); });
-        copyAction.then(function () {
+        copyText(url).then(function () {
           if (feedback) {
             feedback.textContent = "Link copiato.";
             feedback.classList.remove("hidden");
